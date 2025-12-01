@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algorithm & Problem Landscape – Solved vs Unsolved</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+     <!-- THEME TOGGLE BUTTON -->
+  <button id="theme-toggle" class="theme-toggle">
+    <span id="theme-icon">🌙</span>
+  </button>
+  
+  <div class="page">
+    <header>
+      <div class="badge">
+        <div class="badge-dot"></div>
+        <span>Algorithm & Problem Landscape · Human + AI</span>
+      </div>
+      <h1>What problems are <span class="highlight">solved</span>, approximate, or still open?</h1>
+      <p class="subheading">
+        A high-level map of famous problems in <strong>algorithms, math, cryptography, physics, and AI</strong>,
+        grouped by whether humanity has a complete solution, partial solution, or no solution yet.
+      </p>
+      <div class="pill-row">
+        <div class="pill">✔️ Solved · Proven / exact algorithms</div>
+        <div class="pill">⚠️ Partially solved · Approximations / heuristics</div>
+        <div class="pill">❌ Unsolved · Open problems</div>
+        <div class="pill">⭐ AI-accelerated · Big progress via AI</div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT: Main cards -->
+      <section class="panel">
+        <div class="panel-inner">
+          <div class="tabs" aria-label="Filter by status">
+            <button class="tab-btn active" data-status="all">
+              <span class="tab-label">All</span>
+            </button>
+            <button class="tab-btn" data-status="solved">
+              <span class="dot"></span>
+              <span class="tab-label">Solved</span>
+            </button>
+            <button class="tab-btn" data-status="partial">
+              <span class="dot"></span>
+              <span class="tab-label">Partial</span>
+            </button>
+            <button class="tab-btn" data-status="unsolved">
+              <span class="dot"></span>
+              <span class="tab-label">Unsolved</span>
+            </button>
+            <button class="tab-btn" data-status="ai">
+              <span class="dot"></span>
+              <span class="tab-label">AI-Accelerated</span>
+            </button>
+          </div>
+
+          <p class="tab-note">
+            Use the filter to see what humanity (and AI) has fully cracked, where we only have approximations,
+            and where questions are still completely open.
+          </p>
+
+          <div class="cards" id="cards">
+            <!-- SOLVED -->
+            <article class="card" data-status="solved">
+              <div class="card-header">
+                <h2 class="card-title">Classical Algorithms (P: Polynomial Time)</h2>
+                <span class="status-pill status-solved">
+                  <span class="status-dot"></span> Solved
+                </span>
+              </div>
+              <p class="card-body">
+                Sorting, searching, shortest paths (Dijkstra/BFS), minimum spanning tree, max-flow, matching, FFT,
+                and many more core algorithmic problems are completely solved with efficient algorithms.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">Complexity: P</span>
+                <span class="tag">Exact solutions</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="solved">
+              <div class="card-header">
+                <h2 class="card-title">Primality Testing (AKS)</h2>
+                <span class="status-pill status-solved">
+                  <span class="status-dot"></span> Solved
+                </span>
+              </div>
+              <p class="card-body">
+                We have deterministic polynomial-time algorithms to test if a number is prime. This used to be a
+                big open problem; now it’s solidly in P.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Number Theory</span>
+                <span class="tag">Primes</span>
+                <span class="tag">P</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="solved">
+              <div class="card-header">
+                <h2 class="card-title">Checkers (Game solved)</h2>
+                <span class="status-pill status-solved">
+                  <span class="status-dot"></span> Solved
+                </span>
+              </div>
+              <p class="card-body">
+                Checkers is “weakly solved”: with perfect play from both sides, the game is a draw. This has been
+                proven by exhaustive search plus clever algorithms.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Game theory</span>
+                <span class="tag">Exact result</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="solved">
+              <div class="card-header">
+                <h2 class="card-title">Fermat’s Last Theorem & Poincaré Conjecture</h2>
+                <span class="status-pill status-solved">
+                  <span class="status-dot"></span> Solved
+                </span>
+              </div>
+              <p class="card-body">
+                Two of the most famous historical puzzles in mathematics are now solved with complete proofs
+                (Wiles, Perelman). Great milestones, but not algorithmic in the usual sense.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Pure math</span>
+                <span class="tag">Big milestones</span>
+              </div>
+            </article>
+
+            <!-- PARTIAL -->
+            <article class="card" data-status="partial">
+              <div class="card-header">
+                <h2 class="card-title">NP-Hard Optimization (TSP, Knapsack, etc.)</h2>
+                <span class="status-pill status-partial">
+                  <span class="status-dot"></span> Partial
+                </span>
+              </div>
+              <p class="card-body">
+                For Travelling Salesman, Knapsack, Set Cover, Vertex Cover, Max-Cut and hundreds of others, we have
+                good approximation algorithms and heuristics—but no known general efficient exact algorithm.
+              </p>
+              <div class="card-tags">
+                <span class="tag">NP-hard</span>
+                <span class="tag">Approximation</span>
+                <span class="tag">Optimization</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="partial">
+              <div class="card-header">
+                <h2 class="card-title">Machine Learning & Prediction</h2>
+                <span class="status-pill status-partial">
+                  <span class="status-dot"></span> Partial
+                </span>
+              </div>
+              <p class="card-body">
+                Image recognition, speech, translation, and many ML tasks are solved “well enough” in practice, but
+                we do not have exact guarantees, perfect generalization theory, or full understanding.
+              </p>
+              <div class="card-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Probabilistic</span>
+                <span class="tag">Heuristics</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="partial">
+              <div class="card-header">
+                <h2 class="card-title">Turbulence & Complex Fluids (Practical models)</h2>
+                <span class="status-pill status-partial">
+                  <span class="status-dot"></span> Partial
+                </span>
+              </div>
+              <p class="card-body">
+                Engineering uses numerical simulations and empirical models to handle turbulence and fluid flows, but
+                the full Navier–Stokes theory and smoothness questions remain unsolved.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Physics</span>
+                <span class="tag">Simulations</span>
+                <span class="tag">Approximate</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="partial">
+              <div class="card-header">
+                <h2 class="card-title">Protein Folding (AlphaFold & beyond)</h2>
+                <span class="status-pill status-partial">
+                  <span class="status-dot"></span> Partial
+                </span>
+              </div>
+              <p class="card-body">
+                AI systems like AlphaFold predict many protein structures with high accuracy, but the problem is not
+                mathematically “closed” or perfectly solved in all cases.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Bioinformatics</span>
+                <span class="tag">AI-assisted</span>
+              </div>
+            </article>
+
+            <!-- UNSOLVED -->
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">P vs NP (Clay Millennium Problem)</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                The central question of complexity theory: does every efficiently verifiable problem have an efficient
+                solution algorithm? No proof either way. If solved, it would rewrite computer science.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Complexity</span>
+                <span class="tag">Open problem</span>
+                <span class="tag">$1M prize</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">Riemann Hypothesis</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                A deep conjecture about the zeros of the Riemann zeta function and the distribution of prime numbers.
+                Hugely important for number theory and cryptography, but still unproven.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Number Theory</span>
+                <span class="tag">Clay problem</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">Navier–Stokes Smoothness & Existence</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                For 3D fluids, we don’t know whether solutions always remain smooth or can blow up in finite time.
+                This is a core open problem in mathematical physics.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Fluid dynamics</span>
+                <span class="tag">Clay problem</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">Core Crypto Hardness (Factoring, Discrete Log, Lattices)</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                Modern cryptography assumes that factoring large integers, discrete logs, and certain lattice
+                problems are hard. No efficient classical algorithms are known, and no proof of hardness exists.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Cryptography</span>
+                <span class="tag">Security assumptions</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">Chess & Go – Perfect Play</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                AI plays better than humans, but we still don’t know, in theory, whether chess or Go are wins, losses,
+                or draws with perfect play from both sides.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Games</span>
+                <span class="tag">Theoretical status</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="unsolved">
+              <div class="card-header">
+                <h2 class="card-title">Dark Matter, Dark Energy & Quantum Gravity</h2>
+                <span class="status-pill status-unsolved">
+                  <span class="status-dot"></span> Unsolved
+                </span>
+              </div>
+              <p class="card-body">
+                We observe their effects, but do not know what dark matter and dark energy actually are, nor do we
+                have a unified theory combining quantum mechanics with general relativity.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Cosmology</span>
+                <span class="tag">Fundamental physics</span>
+              </div>
+            </article>
+
+            <!-- AI-ACCELERATED -->
+            <article class="card" data-status="ai">
+              <div class="card-header">
+                <h2 class="card-title">Matrix Multiplication (AlphaTensor)</h2>
+                <span class="status-pill status-ai">
+                  <span class="status-dot"></span> AI-Accelerated
+                </span>
+              </div>
+              <p class="card-body">
+                DeepMind’s AlphaTensor discovered new, more efficient algorithms for matrix multiplication—an area
+                where human progress had stalled for decades.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">Deep Learning</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="ai">
+              <div class="card-header">
+                <h2 class="card-title">Protein Structure Prediction (AlphaFold)</h2>
+                <span class="status-pill status-ai">
+                  <span class="status-dot"></span> AI-Accelerated
+                </span>
+              </div>
+              <p class="card-body">
+                AlphaFold and similar models gave a huge leap in predicting 3D protein structures from sequences,
+                transforming biology and drug discovery, even if not mathematically “finished.”
+              </p>
+              <div class="card-tags">
+                <span class="tag">Biology</span>
+                <span class="tag">Deep Learning</span>
+              </div>
+            </article>
+
+            <article class="card" data-status="ai">
+              <div class="card-header">
+                <h2 class="card-title">Game-Playing AIs (Chess, Go, Poker)</h2>
+                <span class="status-pill status-ai">
+                  <span class="status-dot"></span> AI-Accelerated
+                </span>
+              </div>
+              <p class="card-body">
+                Systems like AlphaZero, AlphaGo, and poker AIs use reinforcement learning and search to achieve
+                superhuman performance, discovering new strategies humans hadn’t thought of.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Reinforcement learning</span>
+                <span class="tag">Strategy</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Legend & quick overview -->
+      <aside class="side-panel">
+        <h3 class="side-title">How to read this page</h3>
+        <p class="side-text">
+          Each card is a famous family of problems. The <strong>color</strong> tells you if we have:
+          an exact solution, only approximations, or no solution yet.
+        </p>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-dot solved"></span>
+            <span>✔️ Solved · exact / proven</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot partial"></span>
+            <span>⚠️ Partial · approximate</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot unsolved"></span>
+            <span>❌ Unsolved · open</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot ai"></span>
+            <span>⭐ AI-accelerated</span>
+          </div>
+        </div>
+
+        <h3 class="side-title side-title-spaced">Quick-glance examples</h3>
+        <div class="mini-table">
+          <div class="mini-head">
+            <span>Problem</span>
+            <span>Domain</span>
+            <span>Status</span>
+          </div>
+          <div class="mini-row">
+            <span>Sorting, MST, Max-flow</span>
+            <span class="dim">Algorithms (P)</span>
+            <span>✔️ Solved</span>
+          </div>
+          <div class="mini-row">
+            <span>TSP, Knapsack</span>
+            <span class="dim">Optimization (NP-hard)</span>
+            <span>⚠️ Approx only</span>
+          </div>
+          <div class="mini-row">
+            <span>P vs NP, Riemann</span>
+            <span class="dim">Math & Complexity</span>
+            <span>❌ Unsolved</span>
+          </div>
+          <div class="mini-row">
+            <span>AlphaFold, AlphaZero</span>
+            <span class="dim">AI-assisted breakthroughs</span>
+            <span>⭐ AI-accelerated</span>
+          </div>
+        </div>
+
+        <p class="source-note">
+          For deeper reading, see:
+          <br />
+          • Clay Millennium Problems<br />
+          • “List of unsolved problems in mathematics / CS” on Wikipedia<br />
+          • Open Problem Garden and complexity theory textbooks.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      This page is a high-level map, not a full catalog. Use it as an intuition guide for what humanity
+      (and AI) can solve exactly, approximately, or not at all—yet.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
