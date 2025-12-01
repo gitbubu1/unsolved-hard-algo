@@ -37,11 +37,4 @@ Researchers
 
 Curious learners
 
-🛠️ Tech Stack
-
-HTML5
-
-CSS3 (custom design, gradients, shadows, theming)
-
-JavaScript (filtering + theme toggle)
 
