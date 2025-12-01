@@ -1,29 +1,20 @@
 📘 Algorithm & Problem Landscape – Solved vs Unsolved
 
 
-
 A beautifully designed website that visualizes which major problems in Algorithms, Math, Cryptography, Physics, and AI are:
 
 ✔ Solved
+
 ⚠ Partially Solved (Approximate)
+
 ❌ Unsolved (Open Problems)
+
 ⭐ AI-Accelerated Breakthroughs
 
-Includes category filtering + dark/light mode toggle + smooth UI.
-
-🚀 Features
-
-🟢 Filterable problems (Solved / Partial / Unsolved / AI-Accelerated)
-
-🌙 Dark & Light mode toggle (with localStorage memory)
-
-🎨 Modern, clean UI
-
-📂 Proper separation of files (index.html, styles.css, script.js)
-
-⚡ Fast, responsive layout
 
 📚 Great for learning algorithms, CS theory, and open problems
+
+
 
 📌 Purpose
 
