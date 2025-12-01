@@ -23,26 +23,6 @@ Includes category filtering + dark/light mode toggle + smooth UI.
 
 📚 Great for learning algorithms, CS theory, and open problems
 
-📁 Project Structure
-/project-folder
-│── index.html
-│── styles.css
-│── script.js
-└── assets/ (optional)
-
-🖥️ How to Run Locally
-1. Download or clone the repo
-2. Open index.html in your browser
-
-
-No build steps, no dependencies — just pure HTML, CSS, and JS.
-
-🌗 Dark / Light Mode
-
-Click the floating 🌙 / ☀️ button
-
-Theme preference is saved automatically
-
 📌 Purpose
 
 This project gives a high-level map of the world's most important computational and mathematical problems — an excellent reference for:
